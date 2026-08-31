@@ -8,17 +8,17 @@
     <!-- ใช้ Tailwind CSS ผ่าน CDN สำหรับการจัดหน้าให้สวยงามและ Responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- ฟอนต์ Kanit จาก Google Fonts ให้อ่านง่ายและดูทันสมัย -->
+    <!-- เปลี่ยนฟอนต์เป็น Sarabun (สารบัญ) จาก Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- เพิ่ม SweetAlert2 สำหรับเด้งแจ้งเตือนวิธีติดตั้งตอนกดโหลด -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
         body {
-            font-family: 'Kanit', sans-serif;
+            font-family: 'Sarabun', sans-serif;
             background-color: #f8fafc;
         }
     </style>
@@ -64,7 +64,7 @@
             ดาวน์โหลดแอปพลิเคชัน (APK)
         </a>
         <div class="mt-5 text-sm text-slate-500 font-medium bg-white inline-block px-4 py-1.5 rounded-full shadow-sm border border-slate-100">
-            <span class="text-purple-600">PRODUCTION V1.4.9</span> <span class="mx-2 text-slate-300">|</span> <span>Android Only</span>
+            <span class="text-purple-600 font-semibold">PRODUCTION V1.5.0.39.3</span> <span class="mx-2 text-slate-300">|</span> <span>Android Only</span>
         </div>
     </header>
 
@@ -126,10 +126,10 @@
     <script>
         function showDownloadAlert() {
             Swal.fire({
-                title: 'กำลังดาวน์โหลด PVC Student...',
-                html: '<div class="text-left text-sm mt-2 text-slate-600">อย่าลืมไปที่ <b>การตั้งค่า > ความปลอดภัย</b> <br>และเปิด <b>อนุญาตติดตั้งแอปจากแหล่งที่ไม่รู้จัก</b> นะครับ</div>',
+                title: '<span style="font-family: Sarabun, sans-serif;">กำลังดาวน์โหลด PVC Student...</span>',
+                html: '<div style="font-family: Sarabun, sans-serif;" class="text-left text-sm mt-2 text-slate-600">อย่าลืมไปที่ <b>การตั้งค่า > ความปลอดภัย</b> <br>และเปิด <b>อนุญาตติดตั้งแอปจากแหล่งที่ไม่รู้จัก</b> นะครับ</div>',
                 icon: 'info',
-                confirmButtonText: 'เข้าใจแล้ว',
+                confirmButtonText: '<span style="font-family: Sarabun, sans-serif;">เข้าใจแล้ว</span>',
                 confirmButtonColor: '#9333ea', // สีม่วงให้เข้ากับธีมแอป
                 backdrop: `rgba(147, 51, 234, 0.1)`,
                 timer: 6000,
