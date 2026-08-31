@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- เพิ่ม SweetAlert2 สำหรับเด้งแจ้งเตือนวิธีติดตั้งตอนกดโหลด -->
+    <!-- เพิ่ม SweetAlert2 สำหรับเด้งแจ้งเตือนวิธีติดตั้งตอนกดโหลด (สำหรับ Android) -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
@@ -40,7 +40,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="max-w-5xl mx-auto px-4 py-12 md:py-20 text-center">
+    <header class="max-w-5xl mx-auto px-4 py-12 md:py-16 text-center">
         <!-- App Icon -->
         <div class="inline-block mb-6 relative">
             <div class="absolute inset-0 bg-purple-500 rounded-[2.5rem] blur-xl opacity-30 animate-pulse"></div>
@@ -51,68 +51,87 @@
         <p class="text-lg text-slate-600 mb-2 max-w-2xl mx-auto font-medium">
             ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองนครราชสีมา
         </p>
-        <p class="text-base text-slate-500 mb-10 max-w-2xl mx-auto">
+        <p class="text-base text-slate-500 mb-8 max-w-2xl mx-auto">
             แอปพลิเคชันสำหรับนักศึกษา หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.) <br class="hidden md:block">
-            ดาวน์โหลดและติดตั้งผ่านไฟล์ APK สำหรับอุปกรณ์ Android ได้แล้ววันนี้
+            พร้อมใช้งานบนอุปกรณ์ Android และ iOS
         </p>
 
-        <!-- ปุ่มดาวน์โหลด ดึงไฟล์ตรงจาก Google Drive -->
-        <a href="https://drive.google.com/uc?export=download&id=1jHVqWsfauaU05es7acTC2BvWxfqx7Pwa" onclick="showDownloadAlert()" class="inline-flex items-center gap-3 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30">
-            <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-            ดาวน์โหลดแอปพลิเคชัน (APK)
-        </a>
-        <div class="mt-5 text-sm text-slate-500 font-medium bg-white inline-block px-4 py-1.5 rounded-full shadow-sm border border-slate-100">
-            <span class="text-purple-600 font-semibold">PRODUCTION V1.5.0.39.3</span> <span class="mx-2 text-slate-300">|</span> <span>Android Only</span>
+        <!-- กลุ่มปุ่มดาวน์โหลด/เข้าใช้งาน -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+            <!-- ปุ่ม Android -->
+            <a href="https://drive.google.com/uc?export=download&id=1g0hBknZdcED9dWMocBvSItAcmyQhwNRR" onclick="showDownloadAlert()" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30">
+                <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                Android (APK)
+            </a>
+
+            <!-- ปุ่ม iOS -->
+            <a href="https://pvc-student-app-production-v1-2-fre.vercel.app" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg shadow-slate-900/30">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 170 170">
+                    <path d="M122.25 76.54c-.18-12.78 10.37-18.91 10.8-19.18-5.94-8.72-15.19-9.92-18.49-10.07-7.85-.79-15.35 4.63-19.34 4.63-3.99 0-10.15-4.51-16.71-4.38-8.59.12-16.53 4.99-20.95 12.67-8.94 15.53-2.3 38.56 6.42 51.13 4.25 6.13 9.3 12.98 15.89 12.72 6.32-.26 8.71-4.1 16.36-4.1 7.6 0 9.77 4.1 16.42 3.97 6.84-.13 11.13-6.19 15.32-12.28 4.87-7.13 6.88-14.04 6.99-14.4-.15-.06-12.51-4.81-12.71-19.71M96.79 38.99c3.48-4.21 5.82-10.06 5.18-15.91-5.06.2-11.23 3.37-14.85 7.54-2.89 3.31-5.69 9.32-4.91 15.01 5.71.44 11.11-2.42 14.58-6.64"/>
+                </svg>
+                iOS (Web App)
+            </a>
+        </div>
+
+        <div class="mt-6 text-sm text-slate-500 font-medium bg-white inline-block px-4 py-1.5 rounded-full shadow-sm border border-slate-100">
+            <span class="text-purple-600 font-semibold">PRODUCTION V1.5.0.39.3</span> <span class="mx-2 text-slate-300">|</span> <span>รองรับ Android & iOS</span>
         </div>
     </header>
 
     <!-- Installation Guide Section -->
     <section id="install-guide" class="bg-white py-16 border-t border-slate-100">
         <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 mb-3">ขั้นตอนการติดตั้งแอปพลิเคชัน</h2>
+            
+            <!-- ส่วนของ Android -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 mb-3">การติดตั้งสำหรับ Android (APK)</h2>
                 <p class="text-slate-500">สำหรับอุปกรณ์ Android นอกเหนือจาก Play Store (Sideloading)</p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Step 1 -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-purple-200 transition-all group">
                     <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">1</div>
                     <h3 class="text-xl font-semibold mb-3 text-slate-800">ดาวน์โหลดไฟล์</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        กดปุ่มดาวน์โหลดด้านบน หากเบราว์เซอร์แจ้งเตือนว่า "ไฟล์นี้อาจเป็นอันตราย" ให้กดยืนยัน <b>"ดาวน์โหลดต่อไป"</b> (Download anyway)
-                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm">กดปุ่ม <b>Android (APK)</b> หากเบราว์เซอร์แจ้งเตือนว่า "ไฟล์นี้อาจเป็นอันตราย" ให้กดยืนยัน <b>"ดาวน์โหลดต่อไป"</b></p>
                 </div>
-
-                <!-- Step 2 -->
                 <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-purple-200 transition-all group">
                     <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">2</div>
                     <h3 class="text-xl font-semibold mb-3 text-slate-800">อนุญาตสิทธิ์</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        เมื่อเปิดไฟล์ APK ระบบจะแจ้งเตือนความปลอดภัย ให้ไปที่การตั้งค่าเครื่อง และเปิดสวิตช์ <b>"อนุญาตจากแหล่งที่มานี้"</b> (Unknown Sources)
-                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm">เมื่อเปิดไฟล์ APK ให้ไปที่การตั้งค่าเครื่อง และเปิดสวิตช์ <b>"อนุญาตจากแหล่งที่มานี้"</b> (Unknown Sources)</p>
                 </div>
-
-                <!-- Step 3 -->
                 <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-purple-200 transition-all group">
                     <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">3</div>
                     <h3 class="text-xl font-semibold mb-3 text-slate-800">ติดตั้งและใช้งาน</h3>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        กดย้อนกลับมาที่หน้าติดตั้ง เลือก <b>"ติดตั้ง"</b> (Install) รอระบบดำเนินการสักครู่ เมื่อเสร็จสิ้นสามารถกดเข้าสู่ระบบนักศึกษาได้ทันที
-                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm">เลือก <b>"ติดตั้ง"</b> (หากมีแจ้งเตือนสีแดงจาก Play Protect ให้กด <b>รายละเอียดเพิ่มเติม > ติดตั้งต่อไป</b>)</p>
                 </div>
             </div>
-            
-            <div class="mt-10 max-w-2xl mx-auto bg-amber-50 border border-amber-200 p-5 rounded-xl flex gap-4 items-start">
-                <svg class="w-6 h-6 text-amber-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
-                </svg>
-                <p class="text-sm text-amber-800 leading-relaxed">
-                    <b>ข้อสังเกต:</b> หากระบบ <i>Google Play Protect</i> แจ้งเตือนสีแดงก่อนติดตั้ง ให้กดคำว่า <b>"รายละเอียดเพิ่มเติม"</b> (More details) จากนั้นเลือก <b>"ติดตั้งต่อไป"</b> (Install anyway)
-                </p>
+
+            <hr class="border-slate-200 mb-12">
+
+            <!-- ส่วนของ iOS -->
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 mb-3">การติดตั้งสำหรับ iOS (iPhone / iPad)</h2>
+                <p class="text-slate-500">ติดตั้งเป็น Web App เพื่อเพิ่มไอคอนลงบนหน้าจอโฮม</p>
             </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-slate-300 transition-all group">
+                    <div class="w-14 h-14 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">1</div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-800">เปิดด้วย Safari</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">กดปุ่ม <b>iOS (Web App)</b> ด้านบน <u>โดยต้องใช้เบราว์เซอร์ <b>Safari</b> ในการเปิดเท่านั้น</u></p>
+                </div>
+                <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-slate-300 transition-all group">
+                    <div class="w-14 h-14 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">2</div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-800">กดปุ่มแชร์ 🔗</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">มองหาแถบเมนูด้านล่างของ Safari จากนั้นกดที่ <b>ปุ่มแชร์</b> (ไอคอนรูปสี่เหลี่ยมที่มีลูกศรชี้ขึ้น)</p>
+                </div>
+                <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center hover:shadow-lg hover:border-slate-300 transition-all group">
+                    <div class="w-14 h-14 bg-slate-800 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:scale-110 transition-transform">3</div>
+                    <h3 class="text-xl font-semibold mb-3 text-slate-800">เพิ่มลงหน้าจอโฮม</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">เลือกเมนู <b>“เพิ่มไปยังหน้าจอโฮม” (Add to Home Screen)</b> จากนั้นกด <b>“เพิ่ม / Add”</b> ไอคอนแอปจะปรากฏบนหน้าจอพร้อมเปิดใช้งาน</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -122,15 +141,15 @@
         <p class="mt-1 text-slate-500">หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.)</p>
     </footer>
 
-    <!-- Script สำหรับแจ้งเตือนด้วย SweetAlert2 -->
+    <!-- Script สำหรับแจ้งเตือนด้วย SweetAlert2 (เฉพาะเมื่อกดโหลด Android) -->
     <script>
         function showDownloadAlert() {
             Swal.fire({
-                title: '<span style="font-family: Sarabun, sans-serif;">กำลังดาวน์โหลด PVC Student...</span>',
+                title: '<span style="font-family: Sarabun, sans-serif;">กำลังดาวน์โหลด APK...</span>',
                 html: '<div style="font-family: Sarabun, sans-serif;" class="text-left text-sm mt-2 text-slate-600">อย่าลืมไปที่ <b>การตั้งค่า > ความปลอดภัย</b> <br>และเปิด <b>อนุญาตติดตั้งแอปจากแหล่งที่ไม่รู้จัก</b> นะครับ</div>',
                 icon: 'info',
                 confirmButtonText: '<span style="font-family: Sarabun, sans-serif;">เข้าใจแล้ว</span>',
-                confirmButtonColor: '#9333ea', // สีม่วงให้เข้ากับธีมแอป
+                confirmButtonColor: '#9333ea',
                 backdrop: `rgba(147, 51, 234, 0.1)`,
                 timer: 6000,
                 timerProgressBar: true
