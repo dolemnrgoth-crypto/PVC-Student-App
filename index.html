@@ -252,31 +252,8 @@
         <p class="mt-1 text-slate-500">หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.)</p>
     </footer>
 
-    <!-- Script สำหรับแจ้งเตือนและฟังก์ชันต่างๆ -->
+    <!-- Script สำหรับแจ้งเตือนด้วย SweetAlert2 (เฉพาะเมื่อกดโหลด APK) -->
     <script>
-        // ฟังก์ชันตรวจจับการเปิดผ่าน LINE App
-        document.addEventListener("DOMContentLoaded", function() {
-            const isLineApp = navigator.userAgent.indexOf("Line") !== -1;
-            
-            if (isLineApp) {
-                Swal.fire({
-                    title: '<span style="font-family: Sarabun, sans-serif;">คุณกำลังเปิดผ่าน LINE 💬</span>',
-                    html: '<div style="font-family: Sarabun, sans-serif;" class="text-left text-slate-700 text-sm mt-3">' +
-                          'ระบบไม่สามารถติดตั้งแอปผ่านหน้าต่างของ LINE ได้<br><br>' +
-                          '👉 <b>กรุณากดที่ "จุด 3 จุด" (มุมขวาบน)</b><br>' +
-                          '👉 <b>เลือก "เปิดในเบราว์เซอร์อื่น" หรือ "เปิดใน Safari"</b><br><br>' +
-                          '<span class="text-slate-500 text-xs">*หากคุณไม่เปิดในเบราว์เซอร์ภายนอก จะไม่สามารถดาวน์โหลดไฟล์ APK และไม่สามารถติดตั้งแอปแบบ PWA ได้</span>' +
-                          '</div>',
-                    icon: 'warning',
-                    confirmButtonText: '<span style="font-family: Sarabun, sans-serif;">เข้าใจแล้ว</span>',
-                    confirmButtonColor: '#00b900', // สีเขียวสไตล์ LINE
-                    allowOutsideClick: false, // บังคับให้ต้องกดปุ่ม
-                    backdrop: `rgba(0, 0, 0, 0.7)` // ทำให้พื้นหลังมืดขึ้นเล็กน้อยให้ป๊อปอัปเด่นชัด
-                });
-            }
-        });
-
-        // ฟังก์ชันแจ้งเตือนเมื่อกดโหลด APK (สำหรับผู้ที่ไม่ใช่ LINE หรือหลังจากเปิดเบราว์เซอร์อื่นแล้ว)
         function showDownloadAlert() {
             Swal.fire({
                 title: '<span style="font-family: Sarabun, sans-serif;">กำลังดาวน์โหลด APK...</span>',
