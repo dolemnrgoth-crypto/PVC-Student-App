@@ -20,7 +20,6 @@
 </head>
 <body class="text-slate-800 antialiased selection:bg-purple-200 selection:text-purple-900">
 
-    <!-- Navbar -->
     <nav class="bg-white shadow-sm py-4">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
@@ -37,9 +36,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="max-w-6xl mx-auto px-4 py-12 md:py-16 text-center">
-        <!-- App Icon -->
         <div class="inline-block mb-6 relative">
             <div class="absolute inset-0 bg-purple-500 rounded-[2.5rem] blur-xl opacity-30 animate-pulse"></div>
             <img src="https://img2.pic.in.th/Gemini_Generated_Image_7rqqd47rqqd47rqq-Photoroom.png" alt="PVC Student App" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-[2.5rem] shadow-2xl relative z-10 border-4 border-white">
@@ -54,9 +51,7 @@
             รองรับทั้งระบบ Android และ iOS
         </p>
 
-        <!-- กลุ่มปุ่มดาวน์โหลด/เข้าใช้งาน -->
         <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
-            <!-- ปุ่ม PWA (หลัก) -->
             <a href="https://pvc-student-app-production-v1-2-fre.vercel.app" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-full font-semibold text-lg transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30">
                 <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
@@ -64,8 +59,7 @@
                 ดาวโหลดผ่าน PWA (แนะนำ)
             </a>
 
-            <!-- ปุ่ม APK (สำรอง) -->
-            <a href="https://กดดด" onclick="showDownloadAlert()" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-semibold text-lg transition-all border border-slate-300">
+            <a href="https://drive.google.com/uc?export=download&id=1NxbaXiP72osu9rTbuV5wY5b5xkDTpAwv" onclick="showDownloadAlert()" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full font-semibold text-lg transition-all border border-slate-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                 </svg>
@@ -77,13 +71,11 @@
             <span class="text-purple-600 font-semibold">PRODUCTION V1.5.0.39.3</span> <span class="mx-2 text-slate-300">|</span> <span>รองรับ Android & iOS</span>
         </div>
 
-        <!-- โปสเตอร์ประชาสัมพันธ์แอปพลิเคชัน -->
         <div class="mt-14 max-w-3xl mx-auto overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(147,51,234,0.15)] border-4 border-white transform transition hover:scale-[1.02] duration-300">
             <img src="https://img1.pic.in.th/images/94ab4832408ffa38c5b66b75416be880.png" alt="โปสเตอร์ประชาสัมพันธ์ PVC Student App" class="w-full h-auto object-cover">
         </div>
     </header>
 
-    <!-- Installation Guide Section -->
     <section id="install-guide" class="bg-white py-16 border-t border-slate-100">
         <div class="max-w-6xl mx-auto px-4">
             
@@ -94,178 +86,6 @@
 
             <div class="grid md:grid-cols-3 gap-6">
                 
-                <!-- วิธีที่ 1: Android PWA -->
                 <div class="relative p-6 bg-purple-50 rounded-2xl border border-purple-100 hover:shadow-lg transition-all group">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center text-lg font-bold">1.1</div>
-                        <h3 class="text-xl font-bold text-slate-800">Android (ง่ายที่สุด)</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-3">ติดตั้งผ่านเบราว์เซอร์ (Chrome) โดยไม่ต้องโหลดไฟล์ APK</p>
-                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5 marker:text-purple-400">
-                        <li>กดปุ่ม <b>"เปิดใช้งานแอปพลิเคชัน"</b> ด้านบน</li>
-                        <li>รอสักครู่ จะมีแถบป๊อปอัปเด้งขึ้นมาด้านล่างหน้าจอ ให้กด <b>"เพิ่มลงในหน้าจอหลัก" (Add to Home screen)</b></li>
-                        <li>หากไม่มีป๊อปอัป ให้กดที่ <b>เมนู 3 จุด</b> (มุมขวาบนของ Chrome) แล้วเลือก <b>"ติดตั้งแอป" (Install app)</b></li>
-                    </ul>
-                </div>
-
-                <!-- วิธีที่ 2: iOS PWA -->
-                <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition-all group">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-slate-800 text-white rounded-lg flex items-center justify-center text-lg font-bold">1.2</div>
-                        <h3 class="text-xl font-bold text-slate-800">iOS (iPhone/iPad)</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-3">ต้องเปิดด้วยเบราว์เซอร์ <b>Safari</b> เท่านั้น</p>
-                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5 marker:text-slate-400">
-                        <li>กดปุ่ม <b>"เปิดใช้งานแอปพลิเคชัน"</b> ด้านบน</li>
-                        <li>กดที่ <b>ปุ่มแชร์ 🔗</b> (ไอคอนสี่เหลี่ยมมีลูกศรชี้ขึ้น ที่แถบเมนูด้านล่าง)</li>
-                        <li>เลื่อนหาและเลือกเมนู <b>"เพิ่มไปยังหน้าจอโฮม" (Add to Home Screen)</b></li>
-                        <li>กด <b>"เพิ่ม" (Add)</b> ที่มุมขวาบน</li>
-                    </ul>
-                </div>
-
-                <!-- วิธีที่ 3: Android APK -->
-                <div class="relative p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-lg transition-all group">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-slate-400 text-white rounded-lg flex items-center justify-center text-lg font-bold">1.3</div>
-                        <h3 class="text-xl font-bold text-slate-800">Android (ไฟล์ APK)</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-3">สำหรับผู้ที่ต้องการติดตั้งแบบ Manual</p>
-                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5 marker:text-slate-400">
-                        <li>กดปุ่ม <b>"ดาวน์โหลดไฟล์ APK"</b> ด้านบน</li>
-                        <li>ไปที่การตั้งค่า > ความปลอดภัย เปิด <b>"อนุญาตติดตั้งแอปจากแหล่งที่ไม่รู้จัก" (Unknown Sources)</b></li>
-                        <li>เปิดไฟล์ APK ที่โหลดมาแล้วกด <b>"ติดตั้ง"</b></li>
-                        <li>หาก Play Protect แจ้งเตือน ให้กด <b>รายละเอียดเพิ่มเติม > ติดตั้งต่อไป</b></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- First Login Guide Section -->
-    <section id="first-login" class="bg-purple-50/50 py-16 border-t border-purple-100">
-        <div class="max-w-5xl mx-auto px-4">
-            
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 mb-3">การเข้าสู่ระบบครั้งแรก</h2>
-                <p class="text-slate-500">หลังจากติดตั้งแอปพลิเคชันเสร็จเรียบร้อยแล้ว ให้ทำตามขั้นตอนดังนี้</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6 mb-10">
-                <!-- Step 2 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-300 transition-colors">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="text-2xl">🔐</div>
-                        <h3 class="text-lg font-bold text-slate-800">ขั้นตอนที่ 2: ค้นหารหัสชั่วคราว</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-4">สำหรับการเข้าใช้งานครั้งแรก ให้ค้นหา <b>รหัสชั่วคราว</b> เพื่อใช้ลงทะเบียนและตั้ง <b>PIN 6 หลัก</b></p>
-                    <a href="https://phonwat1555.github.io/-/" target="_blank" class="inline-flex items-center justify-center w-full gap-2 px-4 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-sm transition-all shadow-md">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                        คลิกเพื่อไปหน้าค้นหารหัสชั่วคราว
-                    </a>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-300 transition-colors">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="text-2xl">🔎</div>
-                        <h3 class="text-lg font-bold text-slate-800">ขั้นตอนที่ 3: ค้นหาข้อมูลนักศึกษา</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-3">ในหน้าเว็บค้นหา สามารถค้นหาได้ด้วยข้อมูลดังนี้:</p>
-                    <ul class="text-sm text-slate-600 space-y-1 ml-2 font-medium">
-                        <li>👤 ชื่อ</li>
-                        <li>👤 นามสกุล</li>
-                        <li>🎓 รหัสนักศึกษา</li>
-                    </ul>
-                    <p class="text-amber-600 text-sm mt-3 font-medium bg-amber-50 p-2 rounded-lg border border-amber-100">
-                        * จากนั้นตรวจสอบข้อมูลของตนเองให้ถูกต้องก่อนนำรหัสไปใช้
-                    </p>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-300 transition-colors">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="text-2xl">🔑</div>
-                        <h3 class="text-lg font-bold text-slate-800">ขั้นตอนที่ 4: นำรหัสมาเข้าสู่ระบบ</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        เปิดแอปพลิเคชัน <b>PVC Student App</b> ที่เพิ่งติดตั้งไว้บนเครื่องของคุณ <br><br>
-                        นำ <b>รหัสชั่วคราว</b> ที่ค้นหาได้จากเว็บไซต์<br>
-                        มากรอกในช่อง <b>"รหัสผ่าน"</b> เพื่อเข้าสู่ระบบในครั้งแรก
-                    </p>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-300 transition-colors">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="text-2xl">🛡️</div>
-                        <h3 class="text-lg font-bold text-slate-800">ขั้นตอนที่ 5: ตั้ง PIN สำหรับเข้าใช้งาน</h3>
-                    </div>
-                    <p class="text-slate-600 text-sm mb-3">เมื่อกรอกรหัสผ่านชั่วคราวเรียบร้อยแล้ว ระบบจะแจ้งให้เปลี่ยนเป็น <b>PIN 6 หลัก</b></p>
-                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5 marker:text-purple-400">
-                        <li>👉 ตั้ง PIN ที่จำได้ง่ายสำหรับตนเอง</li>
-                        <li>👉 <b>ไม่ควร</b> บอก PIN ให้ผู้อื่นทราบเพื่อความปลอดภัยของข้อมูล</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Summary & Success Banner -->
-            <div class="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-3xl p-8 md:p-10 text-center text-white shadow-xl shadow-purple-500/20">
-                <div class="text-5xl mb-4 animate-bounce">🎉</div>
-                <h3 class="text-2xl md:text-3xl font-bold mb-3">PVC Student App พร้อมใช้งาน!</h3>
-                <p class="text-purple-100 text-sm md:text-base mb-8 max-w-xl mx-auto">
-                    📌 <b>ครั้งต่อไปไม่ต้องใช้รหัสชั่วคราว</b><br>
-                    ให้เปิดแอปจากไอคอนบนหน้าจอ และเข้าสู่ระบบด้วย <b>PIN 6 หลัก</b> ที่ตั้งไว้ได้เลย
-                </p>
-                
-                <!-- สรุปง่ายๆ Flow -->
-                <div class="bg-white/10 rounded-2xl p-5 md:p-6 backdrop-blur-sm border border-white/20 max-w-3xl mx-auto text-left">
-                    <div class="flex items-center gap-2 mb-4 justify-center">
-                        <div class="text-xl">💡</div>
-                        <h4 class="text-lg font-bold">สรุปง่าย ๆ</h4>
-                    </div>
-                    <div class="flex flex-wrap justify-center items-center gap-2 md:gap-3 text-xs md:text-sm font-medium">
-                        <span class="px-3 py-1.5 bg-white/20 rounded-lg">📲 ติดตั้งแอป</span>
-                        <span class="text-white/50">➡️</span>
-                        <span class="px-3 py-1.5 bg-white/20 rounded-lg">🔎 หารหัสชั่วคราว</span>
-                        <span class="text-white/50">➡️</span>
-                        <span class="px-3 py-1.5 bg-white/20 rounded-lg">🔑 กรอกรหัส</span>
-                        <span class="text-white/50">➡️</span>
-                        <span class="px-3 py-1.5 bg-white/20 rounded-lg">🔐 ตั้ง PIN 6 หลัก</span>
-                        <span class="text-white/50">➡️</span>
-                        <span class="px-3 py-1.5 bg-amber-400 text-amber-900 rounded-lg font-bold">🎓 พร้อมใช้งาน</span>
-                    </div>
-                </div>
-
-                <p class="text-sm text-purple-200 mt-8 flex items-center justify-center gap-2 bg-black/10 inline-flex px-4 py-2 rounded-full">
-                    <svg class="w-5 h-5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    🙏 หากพบปัญหาในการติดตั้งหรือเข้าสู่ระบบ กรุณาติดต่อผู้ดูแลระบบ
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t-4 border-purple-600">
-        <p>&copy; 2026 ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเมืองนครราชสีมา.</p>
-        <p class="mt-1 text-slate-500">หลักสูตรประกาศนียบัตรวิชาชีพ (ปวช.)</p>
-    </footer>
-
-    <!-- Script สำหรับแจ้งเตือนด้วย SweetAlert2 (เฉพาะเมื่อกดโหลด APK) -->
-    <script>
-        function showDownloadAlert() {
-            Swal.fire({
-                title: '<span style="font-family: Sarabun, sans-serif;">กำลังดาวน์โหลด APK...</span>',
-                html: '<div style="font-family: Sarabun, sans-serif;" class="text-left text-sm mt-2 text-slate-600">วิธีนี้สำหรับผู้ที่ต้องการติดตั้งเอง<br>อย่าลืมเปิด <b>อนุญาตติดตั้งแอปจากแหล่งที่ไม่รู้จัก</b> นะครับ<br><br><span class="text-purple-600">*แนะนำให้ใช้ปุ่ม "เปิดใช้งานแอปพลิเคชัน" จะติดตั้งได้ง่ายกว่าครับ</span></div>',
-                icon: 'info',
-                confirmButtonText: '<span style="font-family: Sarabun, sans-serif;">เข้าใจแล้ว</span>',
-                confirmButtonColor: '#9333ea',
-                backdrop: `rgba(147, 51, 234, 0.1)`,
-                timer: 8000,
-                timerProgressBar: true
-            });
-        }
-    </script>
-</body>
-</html>
+                        <div class="w-10 h-10 bg-purple-600 text-white rounded-lg flex items-center justify-center text-lg font-bold">1.1
